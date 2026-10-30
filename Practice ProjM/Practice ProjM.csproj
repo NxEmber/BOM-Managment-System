@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RootNamespace>Practice_ProjM</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dispatch\**" />
+    <Compile Remove="Post-Dispatch\**" />
+    <Compile Remove="Pre-Knitting\**" />
+    <Compile Remove="Procurement\**" />
+    <Compile Remove="QA\**" />
+    <Compile Remove="Store\**" />
+    <EmbeddedResource Remove="Dispatch\**" />
+    <EmbeddedResource Remove="Post-Dispatch\**" />
+    <EmbeddedResource Remove="Pre-Knitting\**" />
+    <EmbeddedResource Remove="Procurement\**" />
+    <EmbeddedResource Remove="QA\**" />
+    <EmbeddedResource Remove="Store\**" />
+    <None Remove="Dispatch\**" />
+    <None Remove="Post-Dispatch\**" />
+    <None Remove="Pre-Knitting\**" />
+    <None Remove="Procurement\**" />
+    <None Remove="QA\**" />
+    <None Remove="Store\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.1" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.8" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
